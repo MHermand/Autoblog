@@ -1,0 +1,436 @@
+{
+  "metadata": {
+    "login": "Sign in",
+    "posts": "Posts",
+    "editor": "Edit article",
+    "settings": "Settings",
+    "connect": "Connect your site"
+  },
+  "common": {
+    "close": "Close",
+    "copy": "Copy",
+    "copied": "Copied",
+    "skipToContent": "Skip to content"
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "fr": "Français"
+  },
+  "nav": {
+    "primary": "Main navigation",
+    "posts": "Posts",
+    "settings": "Settings",
+    "connect": "Connect your site",
+    "signedInAs": "Signed in as",
+    "signOut": "Sign out",
+    "signingOut": "Signing out…"
+  },
+  "errors": {
+    "generic": "Something went wrong (error {status}). Please try again.",
+    "network": "Can't reach the server. Check your connection and try again.",
+    "rejected": "The server rejected the request: {message}",
+    "unauthorized": "Your session has expired. Please sign in again.",
+    "forbidden": "You don't have access to this.",
+    "notFound": "We couldn't find what you were looking for.",
+    "tooLarge": "That file is too large.",
+    "unreachable": "The server took too long to answer. If you were generating an article, it may still appear in your list in a few minutes.",
+    "slugTaken": "This URL slug is already used by another article.",
+    "misconfigured": "The server is not configured correctly. Check its environment variables.",
+    "missingApiKey": "No API key is configured for {provider}. Set it in your environment and restart the app.",
+    "llmError": "The AI provider returned an error: {message}",
+    "unsupportedType": "This file type isn't supported."
+  },
+  "unsaved": {
+    "title": "Leave without saving?",
+    "description": "You have unsaved changes. If you leave now, they will be lost.",
+    "stay": "Keep editing",
+    "leave": "Leave without saving"
+  },
+  "login": {
+    "title": "Sign in",
+    "description": "Enter your email address and we'll send you a magic link. No password needed.",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Send magic link",
+    "sending": "Sending…",
+    "sentTitle": "Check your inbox",
+    "sentBody": "If {email} is authorized to access this blog, a sign-in link is on its way.",
+    "sentHint": "It can take a minute to arrive. Don't forget to check your spam folder.",
+    "useAnotherEmail": "Use a different email address",
+    "errors": {
+      "invalidLink": "This sign-in link is invalid. Request a new one below.",
+      "expiredLink": "This sign-in link has expired. Request a new one below.",
+      "notAllowed": "This email address isn't allowed to access this blog.",
+      "misconfigured": "The server is not configured yet. Check the Supabase and ADMIN_EMAILS environment variables.",
+      "generic": "Sign-in failed (code: {code}). Please try again."
+    }
+  },
+  "posts": {
+    "title": "Posts",
+    "subtitle": "Write, schedule and manage your blog articles.",
+    "generate": "Generate an article",
+    "listLabel": "Articles",
+    "search": "Search by title…",
+    "filter": "Filter by status",
+    "filters": {
+      "all": "All",
+      "draft": "Drafts",
+      "scheduled": "Scheduled",
+      "live": "Live"
+    },
+    "count": "{count, plural, one {# article} other {# articles}}",
+    "loadError": "Couldn't load the articles",
+    "retry": "Try again",
+    "noResults": "No article matches your search.",
+    "untitled": "Untitled",
+    "edit": "Edit",
+    "editAria": "Edit “{title}”",
+    "deleteAria": "Delete “{title}”",
+    "state": {
+      "draft": "Draft",
+      "scheduled": "Scheduled",
+      "live": "Live"
+    },
+    "source": {
+      "manual": "Manual",
+      "auto": "Automatic"
+    },
+    "dates": {
+      "draft": "No publication date",
+      "scheduled": "Scheduled for {date}",
+      "live": "Published {date}"
+    },
+    "pagination": {
+      "label": "Pagination",
+      "previous": "Previous",
+      "next": "Next",
+      "status": "Page {page} of {pages}"
+    },
+    "noProvider": {
+      "title": "No AI text provider is configured",
+      "body": "Add at least one API key to your environment ({vars}), restart the app, then reload this page. Articles can't be generated until then."
+    },
+    "automation": {
+      "title": "Automation",
+      "on": "On",
+      "off": "Off",
+      "nextSlot": "Next article: {date}",
+      "stockFull": "All upcoming slots are already filled",
+      "upcoming": "{count, plural, =0 {no article scheduled} one {# article scheduled} other {# articles scheduled}}",
+      "disabledHint": "Automation is off. Turn it on in the settings to publish articles on a schedule.",
+      "manage": "Automation settings"
+    },
+    "empty": {
+      "title": "No articles yet",
+      "body": "Two quick steps and your blog is rolling.",
+      "step1": "Describe your blog in the settings (brand, audience, tone, language) so the articles sound like you.",
+      "step2": "Come back here and generate your first article.",
+      "openSettings": "Open settings",
+      "generate": "Generate an article"
+    },
+    "delete": {
+      "title": "Delete this article?",
+      "description": "“{title}” will be permanently deleted. This can't be undone.",
+      "cancel": "Cancel",
+      "confirm": "Delete",
+      "deleting": "Deleting…",
+      "done": "Article deleted"
+    }
+  },
+  "generate": {
+    "title": "Generate an article",
+    "description": "Pick a topic or write your own. The article is written, illustrated and saved for you.",
+    "cancel": "Cancel",
+    "submit": "Generate article",
+    "topics": {
+      "heading": "Topic",
+      "loading": "Finding topic ideas…",
+      "error": "Couldn't get topic ideas: {message}",
+      "retry": "Try again",
+      "other": "Show other topics",
+      "overlap": "Close to recent content: {reason}"
+    },
+    "custom": {
+      "option": "Write my own topic",
+      "label": "Your topic",
+      "placeholder": "e.g. How to prepare for your first appointment"
+    },
+    "publish": {
+      "label": "Publication date and time (optional)",
+      "hint": "Leave empty to save the article as a draft. Time in {timezone}.",
+      "invalid": "Enter a valid date and time."
+    },
+    "generating": {
+      "title": "Writing your article…",
+      "description": "This usually takes one to two minutes.",
+      "elapsed": "Elapsed time: {time}",
+      "keepOpen": "Please keep this window open until the article is ready."
+    },
+    "done": {
+      "title": "Your article is ready",
+      "description": "“{title}” has been saved.",
+      "draft": "It's a draft for now.",
+      "scheduled": "It will be published on {date}.",
+      "live": "It is published.",
+      "warnings": "A few things to check",
+      "close": "Close",
+      "open": "Open the article"
+    },
+    "error": {
+      "title": "The article couldn't be generated",
+      "maybeSaved": "If the request timed out, the article may still show up in your list shortly."
+    }
+  },
+  "editor": {
+    "title": "Edit article",
+    "back": "Back to posts",
+    "notFound": {
+      "title": "Article not found",
+      "body": "It may have been deleted."
+    },
+    "loadError": "Couldn't load the article",
+    "updatedAt": "Updated {date}",
+    "viewJson": "View public JSON",
+    "delete": "Delete",
+    "saved": "Article saved",
+    "unsaved": "You have unsaved changes",
+    "allSaved": "All changes saved",
+    "discard": "Discard changes",
+    "save": "Save changes",
+    "saving": "Saving…",
+    "errors": {
+      "titleRequired": "The title is required.",
+      "fixFields": "Fix the highlighted fields before saving."
+    },
+    "fields": {
+      "title": "Title",
+      "excerpt": "Excerpt",
+      "excerptHint": "A short summary shown in article lists."
+    },
+    "slug": {
+      "label": "URL slug",
+      "hint": "Lowercase letters, numbers and dashes. Changing it changes the article's address.",
+      "empty": "The slug is required.",
+      "invalid": "Use only lowercase letters, numbers and single dashes.",
+      "taken": "This slug is already used by another article.",
+      "checking": "Checking availability…",
+      "available": "Available",
+      "suggestion": "Try"
+    },
+    "body": {
+      "label": "Content (Markdown)",
+      "write": "Write",
+      "preview": "Preview",
+      "hint": "Markdown: ## headings, **bold**, lists, [links](https://…), images and quotes.",
+      "previewEmpty": "Nothing to preview yet.",
+      "previewError": "The preview couldn't be loaded."
+    },
+    "publication": {
+      "title": "Publication",
+      "description": "Dates are in the blog's timezone ({timezone}).",
+      "label": "Publication date and time",
+      "invalid": "Enter a valid date and time.",
+      "status": {
+        "draft": "Draft: not public. Pick a date to schedule it.",
+        "scheduled": "Scheduled: it goes live at that time.",
+        "live": "Live: visible through the public API."
+      },
+      "publishNow": "Publish now",
+      "publishNowHint": "Saves your changes and publishes the article immediately",
+      "unschedule": "Unschedule (make draft)",
+      "unpublish": "Unpublish (make draft)"
+    },
+    "cover": {
+      "title": "Cover image",
+      "url": "Image URL",
+      "upload": "Upload an image",
+      "uploading": "Uploading…",
+      "uploadHint": "JPEG, PNG, WebP or GIF, up to 4 MB.",
+      "remove": "Remove",
+      "alt": "Alternative text",
+      "altHint": "Describes the image for screen readers and search engines.",
+      "previewError": "This image couldn't be loaded.",
+      "errors": {
+        "type": "Only JPEG, PNG, WebP and GIF images are accepted.",
+        "size": "The image must be 4 MB or smaller."
+      }
+    },
+    "tags": {
+      "title": "Tags",
+      "label": "Tags",
+      "hint": "Press Enter or comma to add a tag.",
+      "placeholder": "Add a tag",
+      "remove": "Remove tag {tag}"
+    },
+    "seo": {
+      "title": "Search engines",
+      "description": "How the article appears in search results.",
+      "metaTitle": "Meta title",
+      "metaDescription": "Meta description"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Everything that makes this blog yours: brand, writing style, images, AI provider and schedule.",
+    "loadError": "Couldn't load the settings",
+    "retry": "Try again",
+    "saved": "Settings saved",
+    "unsaved": "You have unsaved changes",
+    "allSaved": "All changes saved",
+    "discard": "Discard changes",
+    "save": "Save settings",
+    "saving": "Saving…",
+    "providerDefault": "provider default",
+    "errors": {
+      "fixFields": "Fix the highlighted fields before saving.",
+      "invalidUrl": "Enter a full address starting with http:// or https://.",
+      "invalidLanguage": "Enter a valid language tag such as en, fr or pt-BR.",
+      "invalidTimezone": "Choose a timezone from the list.",
+      "range": "Enter a whole number between {min} and {max}.",
+      "minGreaterThanMax": "The minimum can't be greater than the maximum.",
+      "weekdays": "Pick at least one day."
+    },
+    "brand": {
+      "title": "Brand",
+      "description": "Who is behind the blog. This context is given to the AI for every article.",
+      "name": "Brand name",
+      "nameHint": "Used in articles and meta titles.",
+      "siteUrl": "Website address",
+      "siteUrlHint": "Optional. Used in calls to action.",
+      "context": "About your company",
+      "contextHint": "Markdown. What you do, who you serve, what makes you different. The more concrete, the better the articles."
+    },
+    "writing": {
+      "title": "Writing",
+      "description": "How articles are written.",
+      "language": "Article language",
+      "languageHint": "A BCP 47 tag: en, fr, es, pt-BR… Pick a suggestion or type your own.",
+      "audience": "Audience",
+      "audienceHint": "Who the articles are for, e.g. “first-time home buyers”.",
+      "tone": "Tone of voice",
+      "toneHint": "e.g. “friendly and practical, no jargon”.",
+      "topics": "Topic guidelines",
+      "topicsHint": "Themes and angles to explore, and anything to avoid. One idea per line works well.",
+      "cta": "Call to action",
+      "ctaHint": "Closing sentence inviting readers to act. Leave empty for none.",
+      "wordCountMin": "Minimum word count",
+      "wordCountMax": "Maximum word count"
+    },
+    "images": {
+      "title": "Images",
+      "description": "Illustrations generated for each article.",
+      "provider": "Image provider",
+      "none": "None (no images)",
+      "providerNoneHint": "Articles will be written without a cover or body images.",
+      "model": "Image model",
+      "modelHint": "Optional. Leave empty to use the provider's default.",
+      "bodyCount": "Images inside the article",
+      "bodyCountHint": "In addition to the cover image (0 to 3).",
+      "style": "Visual style",
+      "styleHint": "Added to every image prompt, e.g. “soft watercolor, warm colors, no text”."
+    },
+    "ai": {
+      "title": "AI text",
+      "description": "The model that writes your articles.",
+      "provider": "Text provider",
+      "model": "Text model",
+      "modelHint": "Optional. Leave empty to use the provider's default.",
+      "keysLabel": "API keys detected on the server"
+    },
+    "providers": {
+      "gemini": "Google Gemini",
+      "openai": "OpenAI",
+      "anthropic": "Anthropic",
+      "noKey": "no API key",
+      "keyFound": "API key found",
+      "missingKey": "No API key found for this provider. Set <code>{variable}</code> in your environment and restart the app."
+    },
+    "automation": {
+      "title": "Automation",
+      "description": "Let Autoblog keep your blog stocked: it writes articles ahead of time and schedules them.",
+      "enabled": "Publish automatically",
+      "enabledHint": "When on, new articles are generated to fill the schedule below.",
+      "nextSlot": "Next article: {date}",
+      "stockFull": "All upcoming slots are already filled",
+      "upcoming": "{count, plural, =0 {no article scheduled} one {# article scheduled} other {# articles scheduled}}",
+      "mode": "Schedule",
+      "modes": {
+        "interval": "Every few days",
+        "weekly": "On certain weekdays",
+        "monthly": "Once a month"
+      },
+      "everyDays": "Publish every … days",
+      "weekdays": "Weekdays",
+      "dayOfMonth": "Day of the month",
+      "dayOfMonthHint": "From 1 to 28, so it exists every month.",
+      "publishHour": "Publication hour",
+      "publishHourHint": "0 to 23, in {timezone}.",
+      "horizon": "Articles kept ready in advance (days)",
+      "horizonHint": "How far ahead articles are generated, from 1 to 30 days.",
+      "timezone": "Timezone",
+      "timezoneHint": "Used for the publication hour and for every date shown in this app.",
+      "respaceNote": "Changing the schedule, the hour or the timezone re-spaces the automatic articles that are already scheduled."
+    }
+  },
+  "connect": {
+    "title": "Connect your site",
+    "intro": "Autoblog publishes your articles through a public, read-only JSON API. Your website fetches them from there and shows them in your own design. No database access, no SDK to install.",
+    "how": {
+      "title": "How it works",
+      "one": "Autoblog writes and schedules articles. Only articles whose publication date has passed are public.",
+      "two": "Your site calls the API below to get the list of articles, or a single article.",
+      "three": "You display the title, image and content in your own layout."
+    },
+    "base": {
+      "title": "Your API address",
+      "description": "This is the address of this Autoblog instance. Use it from your site."
+    },
+    "endpoints": {
+      "title": "Endpoints",
+      "params": "Query parameters",
+      "paramName": "Parameter",
+      "paramMeaning": "Meaning",
+      "exampleResponse": "Example response",
+      "tryIt": "Try it in your browser",
+      "tryItHint": "Opens the list of published articles.",
+      "list": {
+        "description": "The published articles, newest first.",
+        "order": "Only published articles are returned: drafts and scheduled articles stay private until their date.",
+        "params": {
+          "page": "Page number, starting at 1 (default 1).",
+          "limit": "Articles per page, from 1 to 100 (default 20).",
+          "tag": "Optional. Only return articles with this tag."
+        }
+      },
+      "single": {
+        "description": "One article by its slug. Returns 404 if it doesn't exist or isn't published yet.",
+        "fields": "On top of the list fields, it includes <code>contentHtml</code> (sanitized HTML, ready to display), <code>contentMarkdown</code> (if you prefer to render it yourself), <code>readingTimeMinutes</code> and <code>updatedAt</code>."
+      }
+    },
+    "snippets": {
+      "title": "Copy-paste snippets",
+      "description": "Start from one of these, then adapt the markup and styles to your site.",
+      "js": {
+        "tab": "JavaScript",
+        "description": "A single HTML file: it shows the list of articles, and an article when the address ends with ?slug=… No build step needed."
+      },
+      "next": {
+        "tab": "Next.js",
+        "description": "Two App Router pages: the blog index and an article page. They fetch on the server with <code>revalidate: 300</code>, so your site stays fast and always fresh."
+      }
+    },
+    "notes": {
+      "title": "Good to know",
+      "cors": {
+        "title": "CORS (requests from a browser)",
+        "body": "By default the API accepts requests from any website. To restrict it, set <code>PUBLIC_API_ALLOWED_ORIGINS</code> to a comma-separated list of your sites (for example <code>https://www.example.com</code>) and redeploy. Requests made from a server, such as a Next.js page, are not affected by CORS."
+      },
+      "cache": {
+        "title": "Caching",
+        "body": "Responses are cached for 5 minutes by CDNs and browsers (<code>Cache-Control: public, s-maxage=300, stale-while-revalidate=3600</code>). A newly published article can take a few minutes to appear on your site."
+      },
+      "seo": "For SEO, use <code>metaTitle</code> and <code>metaDescription</code> for your page's title and description, <code>coverImageUrl</code> for social previews, and <code>publishedAt</code> and <code>updatedAt</code> in your structured data."
+    }
+  }
+}

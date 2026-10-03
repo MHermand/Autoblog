@@ -1,0 +1,436 @@
+{
+  "metadata": {
+    "login": "Connexion",
+    "posts": "Articles",
+    "editor": "Modifier l’article",
+    "settings": "Réglages",
+    "connect": "Connecter votre site"
+  },
+  "common": {
+    "close": "Fermer",
+    "copy": "Copier",
+    "copied": "Copié",
+    "skipToContent": "Aller au contenu"
+  },
+  "language": {
+    "label": "Langue",
+    "en": "English",
+    "fr": "Français"
+  },
+  "nav": {
+    "primary": "Navigation principale",
+    "posts": "Articles",
+    "settings": "Réglages",
+    "connect": "Connecter votre site",
+    "signedInAs": "Connecté en tant que",
+    "signOut": "Se déconnecter",
+    "signingOut": "Déconnexion…"
+  },
+  "errors": {
+    "generic": "Une erreur est survenue (erreur {status}). Veuillez réessayer.",
+    "network": "Impossible de joindre le serveur. Vérifiez votre connexion et réessayez.",
+    "rejected": "Le serveur a refusé la requête : {message}",
+    "unauthorized": "Votre session a expiré. Veuillez vous reconnecter.",
+    "forbidden": "Vous n’avez pas accès à cette ressource.",
+    "notFound": "Nous n’avons pas trouvé ce que vous cherchiez.",
+    "tooLarge": "Ce fichier est trop volumineux.",
+    "unreachable": "Le serveur a mis trop de temps à répondre. Si vous génériez un article, il peut encore apparaître dans votre liste d’ici quelques minutes.",
+    "slugTaken": "Ce slug d’URL est déjà utilisé par un autre article.",
+    "misconfigured": "Le serveur n’est pas configuré correctement. Vérifiez ses variables d’environnement.",
+    "missingApiKey": "Aucune clé d’API n’est configurée pour {provider}. Définissez-la dans votre environnement et redémarrez l’application.",
+    "llmError": "Le fournisseur d’IA a renvoyé une erreur : {message}",
+    "unsupportedType": "Ce type de fichier n’est pas pris en charge."
+  },
+  "unsaved": {
+    "title": "Quitter sans enregistrer ?",
+    "description": "Vous avez des modifications non enregistrées. Si vous quittez maintenant, elles seront perdues.",
+    "stay": "Continuer à modifier",
+    "leave": "Quitter sans enregistrer"
+  },
+  "login": {
+    "title": "Connexion",
+    "description": "Saisissez votre adresse e-mail et nous vous enverrons un lien magique. Pas de mot de passe à retenir.",
+    "emailLabel": "Adresse e-mail",
+    "emailPlaceholder": "vous@exemple.fr",
+    "submit": "Envoyer le lien magique",
+    "sending": "Envoi en cours…",
+    "sentTitle": "Consultez votre boîte mail",
+    "sentBody": "Si {email} est autorisée à accéder à ce blog, un lien de connexion est en route.",
+    "sentHint": "Il peut mettre une minute à arriver. Pensez à vérifier vos courriers indésirables.",
+    "useAnotherEmail": "Utiliser une autre adresse e-mail",
+    "errors": {
+      "invalidLink": "Ce lien de connexion n’est pas valide. Demandez-en un nouveau ci-dessous.",
+      "expiredLink": "Ce lien de connexion a expiré. Demandez-en un nouveau ci-dessous.",
+      "notAllowed": "Cette adresse e-mail n’est pas autorisée à accéder à ce blog.",
+      "misconfigured": "Le serveur n’est pas encore configuré. Vérifiez les variables d’environnement Supabase et ADMIN_EMAILS.",
+      "generic": "La connexion a échoué (code : {code}). Veuillez réessayer."
+    }
+  },
+  "posts": {
+    "title": "Articles",
+    "subtitle": "Rédigez, programmez et gérez les articles de votre blog.",
+    "generate": "Générer un article",
+    "listLabel": "Articles",
+    "search": "Rechercher par titre…",
+    "filter": "Filtrer par statut",
+    "filters": {
+      "all": "Tous",
+      "draft": "Brouillons",
+      "scheduled": "Programmés",
+      "live": "En ligne"
+    },
+    "count": "{count, plural, one {# article} other {# articles}}",
+    "loadError": "Impossible de charger les articles",
+    "retry": "Réessayer",
+    "noResults": "Aucun article ne correspond à votre recherche.",
+    "untitled": "Sans titre",
+    "edit": "Modifier",
+    "editAria": "Modifier « {title} »",
+    "deleteAria": "Supprimer « {title} »",
+    "state": {
+      "draft": "Brouillon",
+      "scheduled": "Programmé",
+      "live": "En ligne"
+    },
+    "source": {
+      "manual": "Manuel",
+      "auto": "Automatique"
+    },
+    "dates": {
+      "draft": "Pas de date de publication",
+      "scheduled": "Programmé pour le {date}",
+      "live": "Publié le {date}"
+    },
+    "pagination": {
+      "label": "Pagination",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "status": "Page {page} sur {pages}"
+    },
+    "noProvider": {
+      "title": "Aucun fournisseur d’IA pour le texte n’est configuré",
+      "body": "Ajoutez au moins une clé d’API à votre environnement ({vars}), redémarrez l’application, puis rechargez cette page. Il est impossible de générer des articles d’ici là."
+    },
+    "automation": {
+      "title": "Automatisation",
+      "on": "Activée",
+      "off": "Désactivée",
+      "nextSlot": "Prochain article : {date}",
+      "stockFull": "Tous les créneaux à venir sont déjà remplis",
+      "upcoming": "{count, plural, =0 {aucun article programmé} one {# article programmé} other {# articles programmés}}",
+      "disabledHint": "L’automatisation est désactivée. Activez-la dans les réglages pour publier des articles selon un calendrier.",
+      "manage": "Réglages d’automatisation"
+    },
+    "empty": {
+      "title": "Aucun article pour le moment",
+      "body": "Deux étapes rapides et votre blog est lancé.",
+      "step1": "Décrivez votre blog dans les réglages (marque, audience, ton, langue) pour que les articles vous ressemblent.",
+      "step2": "Revenez ici et générez votre premier article.",
+      "openSettings": "Ouvrir les réglages",
+      "generate": "Générer un article"
+    },
+    "delete": {
+      "title": "Supprimer cet article ?",
+      "description": "« {title} » sera définitivement supprimé. Cette action est irréversible.",
+      "cancel": "Annuler",
+      "confirm": "Supprimer",
+      "deleting": "Suppression…",
+      "done": "Article supprimé"
+    }
+  },
+  "generate": {
+    "title": "Générer un article",
+    "description": "Choisissez un sujet ou écrivez le vôtre. L’article est rédigé, illustré et enregistré pour vous.",
+    "cancel": "Annuler",
+    "submit": "Générer l’article",
+    "topics": {
+      "heading": "Sujet",
+      "loading": "Recherche d’idées de sujets…",
+      "error": "Impossible d’obtenir des idées de sujets : {message}",
+      "retry": "Réessayer",
+      "other": "Voir d’autres sujets",
+      "overlap": "Proche d’un contenu récent : {reason}"
+    },
+    "custom": {
+      "option": "Écrire mon propre sujet",
+      "label": "Votre sujet",
+      "placeholder": "ex. Comment préparer son premier rendez-vous"
+    },
+    "publish": {
+      "label": "Date et heure de publication (facultatif)",
+      "hint": "Laissez vide pour enregistrer l’article en brouillon. Heure en {timezone}.",
+      "invalid": "Saisissez une date et une heure valides."
+    },
+    "generating": {
+      "title": "Rédaction de votre article…",
+      "description": "Cela prend généralement une à deux minutes.",
+      "elapsed": "Temps écoulé : {time}",
+      "keepOpen": "Gardez cette fenêtre ouverte jusqu’à ce que l’article soit prêt."
+    },
+    "done": {
+      "title": "Votre article est prêt",
+      "description": "« {title} » a été enregistré.",
+      "draft": "C’est un brouillon pour le moment.",
+      "scheduled": "Il sera publié le {date}.",
+      "live": "Il est publié.",
+      "warnings": "Quelques points à vérifier",
+      "close": "Fermer",
+      "open": "Ouvrir l’article"
+    },
+    "error": {
+      "title": "L’article n’a pas pu être généré",
+      "maybeSaved": "Si la requête a expiré, l’article peut tout de même apparaître dans votre liste sous peu."
+    }
+  },
+  "editor": {
+    "title": "Modifier l’article",
+    "back": "Retour aux articles",
+    "notFound": {
+      "title": "Article introuvable",
+      "body": "Il a peut-être été supprimé."
+    },
+    "loadError": "Impossible de charger l’article",
+    "updatedAt": "Modifié le {date}",
+    "viewJson": "Voir le JSON public",
+    "delete": "Supprimer",
+    "saved": "Article enregistré",
+    "unsaved": "Vous avez des modifications non enregistrées",
+    "allSaved": "Toutes les modifications sont enregistrées",
+    "discard": "Annuler les modifications",
+    "save": "Enregistrer",
+    "saving": "Enregistrement…",
+    "errors": {
+      "titleRequired": "Le titre est obligatoire.",
+      "fixFields": "Corrigez les champs signalés avant d’enregistrer."
+    },
+    "fields": {
+      "title": "Titre",
+      "excerpt": "Extrait",
+      "excerptHint": "Un court résumé affiché dans les listes d’articles."
+    },
+    "slug": {
+      "label": "Slug d’URL",
+      "hint": "Lettres minuscules, chiffres et tirets. Le modifier change l’adresse de l’article.",
+      "empty": "Le slug est obligatoire.",
+      "invalid": "Utilisez uniquement des lettres minuscules, des chiffres et des tirets simples.",
+      "taken": "Ce slug est déjà utilisé par un autre article.",
+      "checking": "Vérification de la disponibilité…",
+      "available": "Disponible",
+      "suggestion": "Essayez"
+    },
+    "body": {
+      "label": "Contenu (Markdown)",
+      "write": "Rédaction",
+      "preview": "Aperçu",
+      "hint": "Markdown : titres avec ##, **gras**, listes, [liens](https://…), images et citations.",
+      "previewEmpty": "Rien à prévisualiser pour le moment.",
+      "previewError": "L’aperçu n’a pas pu être chargé."
+    },
+    "publication": {
+      "title": "Publication",
+      "description": "Les dates sont dans le fuseau horaire du blog ({timezone}).",
+      "label": "Date et heure de publication",
+      "invalid": "Saisissez une date et une heure valides.",
+      "status": {
+        "draft": "Brouillon : non public. Choisissez une date pour le programmer.",
+        "scheduled": "Programmé : il sera mis en ligne à cette date.",
+        "live": "En ligne : visible via l’API publique."
+      },
+      "publishNow": "Publier maintenant",
+      "publishNowHint": "Enregistre vos modifications et publie l’article immédiatement",
+      "unschedule": "Déprogrammer (repasser en brouillon)",
+      "unpublish": "Dépublier (repasser en brouillon)"
+    },
+    "cover": {
+      "title": "Image de couverture",
+      "url": "URL de l’image",
+      "upload": "Téléverser une image",
+      "uploading": "Téléversement…",
+      "uploadHint": "JPEG, PNG, WebP ou GIF, jusqu’à 4 Mo.",
+      "remove": "Retirer",
+      "alt": "Texte alternatif",
+      "altHint": "Décrit l’image pour les lecteurs d’écran et les moteurs de recherche.",
+      "previewError": "Cette image n’a pas pu être chargée.",
+      "errors": {
+        "type": "Seules les images JPEG, PNG, WebP et GIF sont acceptées.",
+        "size": "L’image ne doit pas dépasser 4 Mo."
+      }
+    },
+    "tags": {
+      "title": "Étiquettes",
+      "label": "Étiquettes",
+      "hint": "Appuyez sur Entrée ou sur la virgule pour ajouter une étiquette.",
+      "placeholder": "Ajouter une étiquette",
+      "remove": "Retirer l’étiquette {tag}"
+    },
+    "seo": {
+      "title": "Moteurs de recherche",
+      "description": "Comment l’article apparaît dans les résultats de recherche.",
+      "metaTitle": "Méta-titre",
+      "metaDescription": "Méta-description"
+    }
+  },
+  "settings": {
+    "title": "Réglages",
+    "subtitle": "Tout ce qui rend ce blog unique : marque, style d’écriture, images, fournisseur d’IA et calendrier.",
+    "loadError": "Impossible de charger les réglages",
+    "retry": "Réessayer",
+    "saved": "Réglages enregistrés",
+    "unsaved": "Vous avez des modifications non enregistrées",
+    "allSaved": "Toutes les modifications sont enregistrées",
+    "discard": "Annuler les modifications",
+    "save": "Enregistrer les réglages",
+    "saving": "Enregistrement…",
+    "providerDefault": "valeur par défaut du fournisseur",
+    "errors": {
+      "fixFields": "Corrigez les champs signalés avant d’enregistrer.",
+      "invalidUrl": "Saisissez une adresse complète commençant par http:// ou https://.",
+      "invalidLanguage": "Saisissez un code de langue valide, comme en, fr ou pt-BR.",
+      "invalidTimezone": "Choisissez un fuseau horaire dans la liste.",
+      "range": "Saisissez un nombre entier entre {min} et {max}.",
+      "minGreaterThanMax": "Le minimum ne peut pas dépasser le maximum.",
+      "weekdays": "Choisissez au moins un jour."
+    },
+    "brand": {
+      "title": "Marque",
+      "description": "Qui est derrière le blog. Ce contexte est transmis à l’IA pour chaque article.",
+      "name": "Nom de la marque",
+      "nameHint": "Utilisé dans les articles et les méta-titres.",
+      "siteUrl": "Adresse du site web",
+      "siteUrlHint": "Facultatif. Utilisée dans les appels à l’action.",
+      "context": "À propos de votre entreprise",
+      "contextHint": "En Markdown. Ce que vous faites, à qui vous vous adressez, ce qui vous distingue. Plus c’est concret, meilleurs sont les articles."
+    },
+    "writing": {
+      "title": "Rédaction",
+      "description": "La façon dont les articles sont écrits.",
+      "language": "Langue des articles",
+      "languageHint": "Un code BCP 47 : en, fr, es, pt-BR… Choisissez une suggestion ou saisissez le vôtre.",
+      "audience": "Audience",
+      "audienceHint": "À qui s’adressent les articles, par ex. « primo-accédants ».",
+      "tone": "Ton",
+      "toneHint": "par ex. « chaleureux et pratique, sans jargon ».",
+      "topics": "Pistes de sujets",
+      "topicsHint": "Les thèmes et angles à explorer, et ce qu’il faut éviter. Une idée par ligne fonctionne bien.",
+      "cta": "Appel à l’action",
+      "ctaHint": "Phrase de fin invitant les lecteurs à agir. Laissez vide pour n’en avoir aucune.",
+      "wordCountMin": "Nombre de mots minimum",
+      "wordCountMax": "Nombre de mots maximum"
+    },
+    "images": {
+      "title": "Images",
+      "description": "Les illustrations générées pour chaque article.",
+      "provider": "Fournisseur d’images",
+      "none": "Aucun (sans images)",
+      "providerNoneHint": "Les articles seront rédigés sans image de couverture ni images dans le texte.",
+      "model": "Modèle d’images",
+      "modelHint": "Facultatif. Laissez vide pour utiliser le modèle par défaut du fournisseur.",
+      "bodyCount": "Images dans l’article",
+      "bodyCountHint": "En plus de l’image de couverture (de 0 à 3).",
+      "style": "Style visuel",
+      "styleHint": "Ajouté à chaque demande d’image, par ex. « aquarelle douce, couleurs chaudes, sans texte »."
+    },
+    "ai": {
+      "title": "IA pour le texte",
+      "description": "Le modèle qui rédige vos articles.",
+      "provider": "Fournisseur de texte",
+      "model": "Modèle de texte",
+      "modelHint": "Facultatif. Laissez vide pour utiliser le modèle par défaut du fournisseur.",
+      "keysLabel": "Clés d’API détectées sur le serveur"
+    },
+    "providers": {
+      "gemini": "Google Gemini",
+      "openai": "OpenAI",
+      "anthropic": "Anthropic",
+      "noKey": "pas de clé d’API",
+      "keyFound": "Clé d’API détectée",
+      "missingKey": "Aucune clé d’API détectée pour ce fournisseur. Définissez <code>{variable}</code> dans votre environnement et redémarrez l’application."
+    },
+    "automation": {
+      "title": "Automatisation",
+      "description": "Laissez Autoblog garder votre blog approvisionné : il rédige les articles à l’avance et les programme.",
+      "enabled": "Publier automatiquement",
+      "enabledHint": "Lorsque cette option est activée, de nouveaux articles sont générés pour remplir le calendrier ci-dessous.",
+      "nextSlot": "Prochain article : {date}",
+      "stockFull": "Tous les créneaux à venir sont déjà remplis",
+      "upcoming": "{count, plural, =0 {aucun article programmé} one {# article programmé} other {# articles programmés}}",
+      "mode": "Calendrier",
+      "modes": {
+        "interval": "Tous les quelques jours",
+        "weekly": "Certains jours de la semaine",
+        "monthly": "Une fois par mois"
+      },
+      "everyDays": "Publier tous les … jours",
+      "weekdays": "Jours de la semaine",
+      "dayOfMonth": "Jour du mois",
+      "dayOfMonthHint": "De 1 à 28, pour que ce jour existe chaque mois.",
+      "publishHour": "Heure de publication",
+      "publishHourHint": "De 0 à 23, en {timezone}.",
+      "horizon": "Articles préparés à l’avance (jours)",
+      "horizonHint": "Jusqu’à combien de jours à l’avance les articles sont générés, de 1 à 30.",
+      "timezone": "Fuseau horaire",
+      "timezoneHint": "Utilisé pour l’heure de publication et pour toutes les dates affichées dans cette application.",
+      "respaceNote": "Modifier le calendrier, l’heure ou le fuseau horaire redistribue les articles automatiques déjà programmés."
+    }
+  },
+  "connect": {
+    "title": "Connecter votre site",
+    "intro": "Autoblog publie vos articles via une API JSON publique, en lecture seule. Votre site web les récupère et les affiche avec votre propre design. Aucun accès à la base de données, aucun SDK à installer.",
+    "how": {
+      "title": "Comment ça marche",
+      "one": "Autoblog rédige et programme les articles. Seuls ceux dont la date de publication est passée sont publics.",
+      "two": "Votre site appelle l’API ci-dessous pour obtenir la liste des articles ou un article précis.",
+      "three": "Vous affichez le titre, l’image et le contenu dans votre propre mise en page."
+    },
+    "base": {
+      "title": "Adresse de votre API",
+      "description": "C’est l’adresse de cette instance d’Autoblog. Utilisez-la depuis votre site."
+    },
+    "endpoints": {
+      "title": "Points d’accès",
+      "params": "Paramètres de requête",
+      "paramName": "Paramètre",
+      "paramMeaning": "Signification",
+      "exampleResponse": "Exemple de réponse",
+      "tryIt": "Essayer dans votre navigateur",
+      "tryItHint": "Ouvre la liste des articles publiés.",
+      "list": {
+        "description": "Les articles publiés, du plus récent au plus ancien.",
+        "order": "Seuls les articles publiés sont renvoyés : les brouillons et les articles programmés restent privés jusqu’à leur date.",
+        "params": {
+          "page": "Numéro de page, à partir de 1 (1 par défaut).",
+          "limit": "Nombre d’articles par page, de 1 à 100 (20 par défaut).",
+          "tag": "Facultatif. Ne renvoie que les articles portant cette étiquette."
+        }
+      },
+      "single": {
+        "description": "Un article, désigné par son slug. Renvoie 404 s’il n’existe pas ou n’est pas encore publié.",
+        "fields": "En plus des champs de la liste, il contient <code>contentHtml</code> (HTML nettoyé, prêt à afficher), <code>contentMarkdown</code> (si vous préférez le mettre en forme vous-même), <code>readingTimeMinutes</code> et <code>updatedAt</code>."
+      }
+    },
+    "snippets": {
+      "title": "Extraits de code à copier",
+      "description": "Partez de l’un d’eux, puis adaptez le balisage et les styles à votre site.",
+      "js": {
+        "tab": "JavaScript",
+        "description": "Un seul fichier HTML : il affiche la liste des articles, et un article lorsque l’adresse se termine par ?slug=… Aucune étape de build nécessaire."
+      },
+      "next": {
+        "tab": "Next.js",
+        "description": "Deux pages App Router : l’index du blog et la page d’un article. Elles récupèrent les données côté serveur avec <code>revalidate: 300</code>, pour un site rapide et toujours à jour."
+      }
+    },
+    "notes": {
+      "title": "Bon à savoir",
+      "cors": {
+        "title": "CORS (requêtes depuis un navigateur)",
+        "body": "Par défaut, l’API accepte les requêtes de n’importe quel site. Pour la restreindre, définissez <code>PUBLIC_API_ALLOWED_ORIGINS</code> avec la liste de vos sites séparés par des virgules (par exemple <code>https://www.exemple.fr</code>) et redéployez. Les requêtes faites depuis un serveur, comme une page Next.js, ne sont pas concernées par CORS."
+      },
+      "cache": {
+        "title": "Mise en cache",
+        "body": "Les réponses sont mises en cache 5 minutes par les CDN et les navigateurs (<code>Cache-Control: public, s-maxage=300, stale-while-revalidate=3600</code>). Un article tout juste publié peut mettre quelques minutes à apparaître sur votre site."
+      },
+      "seo": "Pour le SEO, utilisez <code>metaTitle</code> et <code>metaDescription</code> pour le titre et la description de votre page, <code>coverImageUrl</code> pour les aperçus sur les réseaux sociaux, et <code>publishedAt</code> et <code>updatedAt</code> dans vos données structurées."
+    }
+  }
+}
